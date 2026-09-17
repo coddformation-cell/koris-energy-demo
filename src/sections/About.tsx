@@ -1,24 +1,25 @@
+import { Link } from 'react-router-dom';
 import { hseStatement, values } from '../data/company';
 
 export default function About() {
   return (
-    <section id="about" className="section about">
+    <section className="section about">
       <div className="container about-inner">
         <div className="about-copy">
-          <span className="eyebrow">About</span>
+          <span className="eyebrow">À propos</span>
           <h2 className="section-title">
-            An engineering-led team, anchored in West Africa.
+            Une équipe d’ingénierie ancrée en Afrique de l’Ouest.
           </h2>
           <p className="about-lead">
-            KORIS ENERGY (fictional) is an offshore, subsea and pipeline services
-            organisation designed for oil & gas operators and EPC contractors
-            active in the Gulf of Guinea. From engineering studies to offshore
-            execution, our approach combines technical rigour and disciplined
-            HSE culture.
+            KORIS ENERGY (fictif) est une entreprise de services offshore, subsea
+            et pipeline conçue pour les opérateurs pétroliers et gaziers ainsi
+            que les EPC contractors actifs dans le Golfe de Guinée. De l’étude
+            d’ingénierie à l’exécution offshore, notre approche combine rigueur
+            technique et culture HSE disciplinée.
           </p>
-          <a href="#contact" className="btn btn-ghost">
-            Discuss a project
-          </a>
+          <Link to="/contact" className="btn btn-ghost">
+            Parler de votre projet
+          </Link>
         </div>
 
         <ul className="about-values" role="list">

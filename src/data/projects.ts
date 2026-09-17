@@ -10,76 +10,76 @@ export type Project = {
   image: string;
 };
 
-// All project names, fields and figures are fictional references.
+// Tous les noms de projets, champs et chiffres sont des références fictives.
 export const projects: Project[] = [
   {
     id: 'p1',
-    title: 'Deepwater flowline installation',
+    title: 'Installation de flowline en eaux profondes',
     category: 'pipeline',
     categoryLabel: 'Pipeline',
-    field: 'Sassandra-South (fictional reference)',
+    field: 'Sassandra-Sud (référence fictive)',
     waterDepth: '850 m',
-    scope: '24" flowline installation & tie-in',
+    scope: 'Installation et tie-in d’une flowline 24"',
     year: '2025',
     image:
       'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=1400&q=80&auto=format&fit=crop',
   },
   {
     id: 'p2',
-    title: 'FPSO subsea inspection campaign',
+    title: 'Campagne d’inspection subsea sur FPSO',
     category: 'subsea',
     categoryLabel: 'Subsea',
-    field: 'Poseidon FPSO (fictional reference)',
+    field: 'FPSO Poseidon (référence fictive)',
     waterDepth: '1 240 m',
-    scope: 'ROV visual & CP survey — mooring, risers',
+    scope: 'Inspection ROV visuelle et CP — ancrages, risers',
     year: '2025',
     image:
       'https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1400&q=80&auto=format&fit=crop',
   },
   {
     id: 'p3',
-    title: 'Riser IRM program',
+    title: 'Programme IRM sur risers',
     category: 'irm',
     categoryLabel: 'IRM',
-    field: 'Marlin-2 field (fictional reference)',
+    field: 'Champ Marlin-2 (référence fictive)',
     waterDepth: '620 m',
-    scope: 'Annual riser inspection & repair',
+    scope: 'Inspection annuelle et réparation des risers',
     year: '2024',
     image:
       'https://images.unsplash.com/photo-1585036156171-384164a8c675?w=1400&q=80&auto=format&fit=crop',
   },
   {
     id: 'p4',
-    title: 'Umbilical repair intervention',
+    title: 'Intervention de réparation d’umbilical',
     category: 'subsea',
     categoryLabel: 'Subsea',
-    field: 'Block CI-99 (fictional reference)',
+    field: 'Bloc CI-99 (référence fictive)',
     waterDepth: '740 m',
-    scope: 'Umbilical severance & connector replacement',
+    scope: 'Section et remplacement de connecteur d’umbilical',
     year: '2024',
     image:
       'https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=1400&q=80&auto=format&fit=crop',
   },
   {
     id: 'p5',
-    title: 'Platform hook-up & commissioning',
+    title: 'Hook-up et commissioning de plateforme',
     category: 'offshore',
     categoryLabel: 'Offshore',
-    field: 'Ivorien-Sud platform (fictional reference)',
+    field: 'Plateforme Ivorien-Sud (référence fictive)',
     waterDepth: '95 m',
-    scope: 'Module hook-up, mechanical completion',
+    scope: 'Hook-up des modules, complétion mécanique',
     year: '2024',
     image:
       'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?w=1400&q=80&auto=format&fit=crop',
   },
   {
     id: 'p6',
-    title: 'Manifold retrieval & redeployment',
+    title: 'Récupération et repose de manifold',
     category: 'offshore',
     categoryLabel: 'Offshore',
-    field: 'Delta-1 field (fictional reference)',
+    field: 'Champ Delta-1 (référence fictive)',
     waterDepth: '980 m',
-    scope: 'Subsea manifold recovery & reinstallation',
+    scope: 'Récupération et réinstallation d’un manifold subsea',
     year: '2023',
     image:
       'https://images.unsplash.com/photo-1524661135-423995f22d0b?w=1400&q=80&auto=format&fit=crop',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
 ];
 
 export const projectFilters = [
-  { id: 'all', label: 'All' },
+  { id: 'all', label: 'Tous' },
   { id: 'pipeline', label: 'Pipeline' },
   { id: 'subsea', label: 'Subsea' },
   { id: 'offshore', label: 'Offshore' },

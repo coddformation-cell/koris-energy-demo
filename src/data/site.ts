@@ -1,9 +1,10 @@
 export const site = {
   brand: 'KORIS ENERGY',
-  tagline: 'Engineering the depths. Powering the future.',
+  baseline: 'Engineering the depths.',
+  tagline: 'Ingénierie des profondeurs.',
   subline:
-    'Ingénierie, installation et maintenance offshore & subsea pour l’industrie du pétrole et du gaz.',
-  region: 'Gulf of Guinea',
+    'KORIS ENERGY accompagne les acteurs de l’énergie dans leurs projets offshore, subsea et pipeline dans le Golfe de Guinée.',
+  region: 'Golfe de Guinée',
   contact: {
     phone: '+225 07 00 00 00 00',
     email: 'contact@koris-energy.demo',
@@ -15,14 +16,14 @@ export const site = {
     { name: 'YouTube', href: '#' },
   ],
   disclaimer:
-    'This website is a fictional mockup for demonstration purposes only. Company name, projects, figures, references and testimonials are illustrative.',
+    'Ce site est une maquette de démonstration. Le nom de l’entreprise, les projets, les chiffres, les références et les témoignages sont fictifs et illustratifs. Aucun service réel n’est fourni.',
 };
 
 export const navLinks = [
-  { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Solutions', href: '#solutions' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Standards', href: '#standards' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Expertises', to: '/expertises' },
+  { label: 'Solutions', to: '/solutions' },
+  { label: 'Projets', to: '/projets' },
+  { label: 'Référentiels', to: '/referentiels' },
+  { label: 'À propos', to: '/a-propos' },
+  { label: 'Contact', to: '/contact' },
 ];

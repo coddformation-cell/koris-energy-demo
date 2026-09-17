@@ -1,18 +1,25 @@
 import { capabilities } from '../data/capabilities';
 
-export default function Capabilities() {
+type Props = {
+  compact?: boolean;
+};
+
+export default function Capabilities({ compact = false }: Props) {
   return (
-    <section id="capabilities" className="section capabilities">
+    <section className="section capabilities">
       <div className="container">
         <header className="section-head">
-          <span className="eyebrow">Capabilities</span>
+          <span className="eyebrow">Expertises</span>
           <h2 className="section-title">
-            Four disciplines to engineer, install and sustain offshore assets.
+            Quatre expertises pour concevoir, installer et maintenir vos actifs
+            offshore.
           </h2>
-          <p className="section-lead">
-            Une offre intégrée couvrant la conception, l’installation et la
-            maintenance d’infrastructures pétrolières et gazières offshore.
-          </p>
+          {!compact && (
+            <p className="section-lead">
+              Une offre intégrée couvrant l’ingénierie, l’installation et la
+              maintenance des infrastructures pétrolières et gazières offshore.
+            </p>
+          )}
         </header>
 
         <ul className="capabilities-grid" role="list">
@@ -34,7 +41,7 @@ export default function Capabilities() {
                   ))}
                 </ul>
                 <div className="capability-standards mono">
-                  <span>Applicable standards</span>
+                  <span>Référentiels applicables</span>
                   <strong>{c.standardsHint}</strong>
                 </div>
               </div>

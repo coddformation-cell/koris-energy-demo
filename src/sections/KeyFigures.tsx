@@ -2,17 +2,17 @@ import { keyFigures } from '../data/company';
 
 export default function KeyFigures() {
   return (
-    <section id="figures" className="section figures">
+    <section className="section figures">
       <div className="container">
         <header className="section-head figures-head">
-          <span className="eyebrow">Key figures</span>
+          <span className="eyebrow">Chiffres clés</span>
           <h2 className="section-title">
-            Illustrative operational footprint.
+            Empreinte opérationnelle illustrative.
           </h2>
           <p className="section-lead">
-            All figures below are illustrative placeholders for this mockup.
-            They do not represent real commercial, operational or HSE
-            performance.
+            L’ensemble des chiffres ci-dessous sont des valeurs illustratives
+            pour la maquette. Ils ne représentent aucune performance
+            commerciale, opérationnelle ou HSE réelle.
           </p>
         </header>
 

@@ -64,8 +64,15 @@
   background: var(--color-accent);
   transition: width 220ms ease;
 }
-.header-link:hover::after {
+.header-link:hover::after,
+.header-link.is-active::after {
   width: 100%;
+}
+.header-link.is-active {
+  color: var(--color-fg);
+}
+.mobile-link.is-active {
+  color: var(--color-accent);
 }
 
 .header-actions {

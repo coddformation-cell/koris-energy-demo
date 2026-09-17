@@ -2,12 +2,12 @@ import { processSteps } from '../data/company';
 
 export default function Process() {
   return (
-    <section id="process" className="section process">
+    <section className="section process">
       <div className="container">
         <header className="section-head">
-          <span className="eyebrow">Process</span>
+          <span className="eyebrow">Processus</span>
           <h2 className="section-title">
-            From scope definition to offshore handover.
+            Du cadrage du projet à la livraison offshore.
           </h2>
         </header>
 

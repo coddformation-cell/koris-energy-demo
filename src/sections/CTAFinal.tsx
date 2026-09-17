@@ -1,21 +1,23 @@
+import { Link } from 'react-router-dom';
+
 export default function CTAFinal() {
   return (
     <section className="section cta-final">
       <div className="container cta-final-inner">
-        <span className="eyebrow">Get in touch</span>
+        <span className="eyebrow">Contact</span>
         <h2 className="cta-final-title">
-          Have a subsea or offshore challenge?
+          Un projet subsea ou offshore ?
           <br />
-          <span>Let’s engineer the solution.</span>
+          <span>Étudions la solution ensemble.</span>
         </h2>
         <div className="cta-final-actions">
-          <a href="#contact" className="btn btn-primary">
-            Request a quote
+          <Link to="/contact" className="btn btn-primary">
+            Demander un devis
             <span aria-hidden="true">→</span>
-          </a>
-          <a href="#projects" className="btn btn-ghost">
-            See projects
-          </a>
+          </Link>
+          <Link to="/projets" className="btn btn-ghost">
+            Voir nos projets
+          </Link>
         </div>
       </div>
     </section>

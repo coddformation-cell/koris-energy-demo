@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 import { navLinks, site } from '../data/site';
 import { capabilities } from '../data/capabilities';
@@ -10,15 +11,16 @@ export default function Footer() {
         <div className="footer-brand">
           <Logo />
           <p>
-            Offshore, subsea, pipeline and IRM services for oil & gas operators
-            and EPC contractors — engineered from the Gulf of Guinea.
+            Services offshore, subsea, pipeline et IRM pour les opérateurs
+            pétroliers et gaziers et les EPC contractors — pensés depuis le
+            Golfe de Guinée.
           </p>
           <ul className="footer-locations" role="list">
             <li>
-              <span className="mono">HQ</span> {site.contact.hq}
+              <span className="mono">Siège</span> {site.contact.hq}
             </li>
             <li>
-              <span className="mono">OPS</span> {site.contact.operationsBase}
+              <span className="mono">Base</span> {site.contact.operationsBase}
             </li>
           </ul>
         </div>
@@ -27,19 +29,19 @@ export default function Footer() {
           <h4>Navigation</h4>
           <ul>
             {navLinks.map((l) => (
-              <li key={l.href}>
-                <a href={l.href}>{l.label}</a>
+              <li key={l.to}>
+                <Link to={l.to}>{l.label}</Link>
               </li>
             ))}
           </ul>
         </div>
 
         <div className="footer-col">
-          <h4>Capabilities</h4>
+          <h4>Expertises</h4>
           <ul>
             {capabilities.map((c) => (
               <li key={c.id}>
-                <a href="#capabilities">{c.title}</a>
+                <Link to="/expertises">{c.title}</Link>
               </li>
             ))}
           </ul>
@@ -68,9 +70,9 @@ export default function Footer() {
       </div>
 
       <div className="container footer-bottom">
-        <span>© {year} KORIS ENERGY (fictional) — All rights reserved.</span>
+        <span>© {year} KORIS ENERGY (fictif) — Tous droits réservés.</span>
         <span className="footer-demo">
-          Mockup for demonstration purposes only. No real services provided.
+          Maquette de démonstration — aucun service réel n’est fourni.
         </span>
       </div>
     </footer>

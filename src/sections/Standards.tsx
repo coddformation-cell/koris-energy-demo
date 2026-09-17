@@ -2,7 +2,7 @@ import { standards, standardsIntro } from '../data/standards';
 
 export default function Standards() {
   return (
-    <section id="standards" className="section standards">
+    <section className="section standards">
       <div className="container">
         <header className="section-head standards-head">
           <span className="eyebrow">{standardsIntro.eyebrow}</span>

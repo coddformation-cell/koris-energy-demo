@@ -30,7 +30,7 @@ export default function Contact() {
   const submit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      setError('Please fill in your name, business email and message.');
+      setError('Merci de renseigner votre nom, votre email professionnel et un message.');
       return;
     }
     setError(null);
@@ -40,11 +40,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section contact">
+    <section className="section contact">
       <div className="container contact-inner">
         <div className="contact-info">
           <span className="eyebrow">Contact</span>
-          <h2 className="section-title">Talk to our engineering team.</h2>
+          <h2 className="section-title">Échangez avec notre équipe d’ingénierie.</h2>
           <p className="contact-lead">
             Décrivez brièvement votre projet offshore, subsea ou pipeline —
             notre équipe revient vers vous sous 48 heures ouvrées.
@@ -52,66 +52,66 @@ export default function Contact() {
 
           <ul className="contact-items" role="list">
             <li>
-              <span className="contact-label mono">Phone</span>
+              <span className="contact-label mono">Téléphone</span>
               <a href={`tel:${site.contact.phone.replace(/\s/g, '')}`}>
                 {site.contact.phone}
               </a>
             </li>
             <li>
-              <span className="contact-label mono">Business email</span>
+              <span className="contact-label mono">Email professionnel</span>
               <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>
             </li>
             <li>
-              <span className="contact-label mono">Headquarters</span>
+              <span className="contact-label mono">Siège</span>
               <span>{site.contact.hq}</span>
             </li>
             <li>
-              <span className="contact-label mono">Operations base</span>
+              <span className="contact-label mono">Base opérationnelle</span>
               <span>{site.contact.operationsBase}</span>
             </li>
           </ul>
 
           <p className="contact-note mono">
-            Fictional contact information for demonstration purposes only.
+            Coordonnées fictives — à des fins de démonstration uniquement.
           </p>
         </div>
 
         <form className="contact-form" onSubmit={submit} noValidate>
           <div className="form-row">
             <label className="field">
-              <span>Full name</span>
+              <span>Nom complet</span>
               <input
                 type="text"
                 value={form.name}
                 onChange={(e) => update('name', e.target.value)}
-                placeholder="Jane Doe"
+                placeholder="Ex. Aïcha Koné"
                 required
               />
             </label>
             <label className="field">
-              <span>Company</span>
+              <span>Société</span>
               <input
                 type="text"
                 value={form.company}
                 onChange={(e) => update('company', e.target.value)}
-                placeholder="Company name"
+                placeholder="Nom de votre société"
               />
             </label>
           </div>
 
           <div className="form-row">
             <label className="field">
-              <span>Business email</span>
+              <span>Email professionnel</span>
               <input
                 type="email"
                 value={form.email}
                 onChange={(e) => update('email', e.target.value)}
-                placeholder="you@company.com"
+                placeholder="vous@societe.com"
                 required
               />
             </label>
             <label className="field">
-              <span>Country</span>
+              <span>Pays</span>
               <input
                 type="text"
                 value={form.country}
@@ -122,7 +122,7 @@ export default function Contact() {
           </div>
 
           <label className="field">
-            <span>Project scope</span>
+            <span>Périmètre du projet</span>
             <select
               value={form.scope}
               onChange={(e) => update('scope', e.target.value)}
@@ -130,18 +130,18 @@ export default function Contact() {
               <option>Pipeline</option>
               <option>Subsea</option>
               <option>Offshore</option>
-              <option>Inspection & Maintenance</option>
-              <option>Other</option>
+              <option>Inspection et maintenance (IRM)</option>
+              <option>Autre</option>
             </select>
           </label>
 
           <label className="field">
-            <span>Project description</span>
+            <span>Description du projet</span>
             <textarea
               rows={5}
               value={form.message}
               onChange={(e) => update('message', e.target.value)}
-              placeholder="Brief description of your project (scope, location, timing…)"
+              placeholder="Brève description de votre projet (périmètre, localisation, calendrier…)"
               required
             />
           </label>
@@ -149,13 +149,13 @@ export default function Contact() {
           {error && <p className="form-error">{error}</p>}
           {sent && (
             <p className="form-success">
-              Thank you — your request has been recorded (demo only, no data
-              transmitted).
+              Merci — votre demande a bien été enregistrée (démonstration
+              uniquement, aucune donnée transmise).
             </p>
           )}
 
           <button type="submit" className="btn btn-primary form-submit">
-            Send inquiry
+            Envoyer la demande
             <span aria-hidden="true">→</span>
           </button>
         </form>

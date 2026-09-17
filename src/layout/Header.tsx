@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../components/Logo';
 import { navLinks } from '../data/site';
 import './Header.css';
@@ -6,6 +7,7 @@ import './Header.css';
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -21,6 +23,10 @@ export default function Header() {
     };
   }, [open]);
 
+  useEffect(() => {
+    setOpen(false);
+  }, [location.pathname]);
+
   const close = () => setOpen(false);
 
   return (
@@ -28,22 +34,28 @@ export default function Header() {
       <div className="container header-inner">
         <Logo />
 
-        <nav className="header-nav" aria-label="Primary">
+        <nav className="header-nav" aria-label="Navigation principale">
           {navLinks.map((l) => (
-            <a key={l.href} href={l.href} className="header-link">
+            <NavLink
+              key={l.to}
+              to={l.to}
+              className={({ isActive }) =>
+                `header-link ${isActive ? 'is-active' : ''}`
+              }
+            >
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
 
         <div className="header-actions">
-          <a href="#contact" className="btn btn-solid header-cta">
-            Request a quote
-          </a>
+          <NavLink to="/contact" className="btn btn-solid header-cta">
+            Demander un devis
+          </NavLink>
           <button
             type="button"
             className={`burger ${open ? 'is-open' : ''}`}
-            aria-label={open ? 'Close menu' : 'Open menu'}
+            aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -62,23 +74,25 @@ export default function Header() {
         aria-modal="true"
         aria-hidden={!open}
       >
-        <nav className="mobile-nav" aria-label="Mobile">
+        <nav className="mobile-nav" aria-label="Navigation mobile">
           {navLinks.map((l, i) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="mobile-link"
+            <NavLink
+              key={l.to}
+              to={l.to}
+              className={({ isActive }) =>
+                `mobile-link ${isActive ? 'is-active' : ''}`
+              }
               style={{ transitionDelay: `${100 + i * 40}ms` }}
               onClick={close}
             >
               <span className="mobile-link-index">0{i + 1}</span>
               {l.label}
-            </a>
+            </NavLink>
           ))}
         </nav>
-        <a href="#contact" className="btn btn-primary mobile-cta" onClick={close}>
-          Request a quote
-        </a>
+        <NavLink to="/contact" className="btn btn-primary mobile-cta" onClick={close}>
+          Demander un devis
+        </NavLink>
       </div>
     </header>
   );

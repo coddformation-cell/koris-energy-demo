@@ -2,15 +2,16 @@ import { testimonials } from '../data/company';
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="section testimonials">
+    <section className="section testimonials">
       <div className="container">
         <header className="section-head">
-          <span className="eyebrow">Client voices</span>
+          <span className="eyebrow">Témoignages</span>
           <h2 className="section-title">
-            Illustrative feedback from B2B stakeholders.
+            Retours illustratifs de nos interlocuteurs B2B.
           </h2>
           <p className="section-lead mono">
-            All testimonials below are fictional — placeholders for a mockup.
+            L’ensemble des témoignages ci-dessous sont fictifs — placeholders
+            pour la maquette.
           </p>
         </header>
 

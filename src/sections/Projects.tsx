@@ -10,21 +10,22 @@ export default function Projects() {
   );
 
   return (
-    <section id="projects" className="section projects">
+    <section className="section projects">
       <div className="container">
         <header className="section-head projects-head">
           <div>
-            <span className="eyebrow">Projects</span>
-            <h2 className="section-title">Selected illustrative projects.</h2>
+            <span className="eyebrow">Projets</span>
+            <h2 className="section-title">Une sélection illustrative de nos projets.</h2>
             <p className="section-lead">
-              Fictitious project references built for demonstration — no real
-              client data or field location is disclosed.
+              Références de projets fictives à des fins de démonstration —
+              aucune donnée client réelle ni localisation exacte n’est
+              divulguée.
             </p>
           </div>
           <div
             className="projects-filters"
             role="tablist"
-            aria-label="Filter projects by discipline"
+            aria-label="Filtrer les projets par discipline"
           >
             {projectFilters.map((f) => (
               <button
@@ -56,19 +57,19 @@ export default function Projects() {
                 <h3 className="project-title">{p.title}</h3>
                 <dl className="project-specs">
                   <div>
-                    <dt className="mono">Field</dt>
+                    <dt className="mono">Champ</dt>
                     <dd>{p.field}</dd>
                   </div>
                   <div>
-                    <dt className="mono">Water depth</dt>
+                    <dt className="mono">Profondeur</dt>
                     <dd>{p.waterDepth}</dd>
                   </div>
                   <div>
-                    <dt className="mono">Scope</dt>
+                    <dt className="mono">Périmètre</dt>
                     <dd>{p.scope}</dd>
                   </div>
                   <div>
-                    <dt className="mono">Year</dt>
+                    <dt className="mono">Année</dt>
                     <dd>{p.year}</dd>
                   </div>
                 </dl>
@@ -78,7 +79,7 @@ export default function Projects() {
         </div>
 
         {items.length === 0 && (
-          <p className="projects-empty">No project in this discipline yet.</p>
+          <p className="projects-empty">Aucun projet dans cette discipline pour le moment.</p>
         )}
       </div>
     </section>

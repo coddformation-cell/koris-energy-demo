@@ -1,8 +1,9 @@
+import { Link } from 'react-router-dom';
 import { site } from '../data/site';
 
 export default function Hero() {
   return (
-    <section id="top" className="hero">
+    <section className="hero">
       <div className="hero-media" aria-hidden="true">
         <img
           src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=2400&q=80&auto=format&fit=crop"
@@ -20,41 +21,43 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-title">
-          Engineering
+          Ingénierie
           <br />
-          the depths.
+          des profondeurs.
         </h1>
+
+        <p className="hero-baseline mono">{site.baseline}</p>
 
         <p className="hero-sub">{site.subline}</p>
 
         <div className="hero-actions">
-          <a href="#contact" className="btn btn-primary">
-            Request a quote
+          <Link to="/contact" className="btn btn-primary">
+            Parler de votre projet
             <span aria-hidden="true">→</span>
-          </a>
-          <a href="#capabilities" className="btn btn-ghost">
-            Explore capabilities
-          </a>
+          </Link>
+          <Link to="/expertises" className="btn btn-ghost">
+            Voir nos expertises
+          </Link>
         </div>
 
         <dl className="hero-meta">
           <div>
-            <dt className="mono">Focus</dt>
+            <dt className="mono">Domaines</dt>
             <dd>Offshore · Subsea · Pipeline · IRM</dd>
           </div>
           <div>
-            <dt className="mono">Region</dt>
-            <dd>Gulf of Guinea — West Africa</dd>
+            <dt className="mono">Région</dt>
+            <dd>Golfe de Guinée — Afrique de l’Ouest</dd>
           </div>
           <div>
-            <dt className="mono">Contracting</dt>
-            <dd>EPCI · Services · IRM programs</dd>
+            <dt className="mono">Contractualisation</dt>
+            <dd>EPCI · Services · Programmes IRM</dd>
           </div>
         </dl>
 
-        <span className="hero-demo-badge" aria-label="Demonstration website">
+        <span className="hero-demo-badge" aria-label="Site de démonstration">
           <span className="hero-demo-dot" aria-hidden="true" />
-          Demo · Fictional mockup
+          Démo · Maquette fictive
         </span>
       </div>
     </section>
