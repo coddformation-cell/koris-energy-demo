@@ -10,7 +10,7 @@ export default function Referentiels() {
         title="Un cadre de référence international."
         lead="Nos opérations et méthodes peuvent être conduites en alignement avec les référentiels applicables au secteur pétrolier et gazier, offshore et subsea. Aucune accréditation ni certification n’est revendiquée dans cette maquette."
       />
-      <Standards />
+      <Standards hideHeader />
       <CTAFinal />
     </>
   );

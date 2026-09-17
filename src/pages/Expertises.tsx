@@ -11,7 +11,7 @@ export default function Expertises() {
         title="Quatre expertises pour concevoir, installer et maintenir vos actifs offshore."
         lead="De l’ingénierie de détail à la maintenance IRM, KORIS ENERGY couvre l’ensemble du cycle des infrastructures pétrolières et gazières offshore et subsea."
       />
-      <Capabilities />
+      <Capabilities hideHeader />
       <Process />
       <CTAFinal />
     </>

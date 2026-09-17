@@ -490,6 +490,15 @@
   gap: 1rem;
   max-width: 640px;
 }
+.projects-head.is-filters-only {
+  justify-content: flex-start;
+  margin-bottom: 2.5rem;
+  align-items: center;
+}
+.projects-head.is-filters-only .projects-filters {
+  width: auto;
+  flex-direction: row;
+}
 .projects-filters {
   display: flex;
   gap: 0.3rem;

@@ -1,15 +1,21 @@
 import { Link } from 'react-router-dom';
 import { hseStatement, values } from '../data/company';
 
-export default function About() {
+type Props = { hideHeader?: boolean };
+
+export default function About({ hideHeader = false }: Props) {
   return (
     <section className="section about">
       <div className="container about-inner">
         <div className="about-copy">
-          <span className="eyebrow">À propos</span>
-          <h2 className="section-title">
-            Une équipe d’ingénierie ancrée en Afrique de l’Ouest.
-          </h2>
+          {!hideHeader && (
+            <>
+              <span className="eyebrow">À propos</span>
+              <h2 className="section-title">
+                Une équipe d’ingénierie ancrée en Afrique de l’Ouest.
+              </h2>
+            </>
+          )}
           <p className="about-lead">
             KORIS ENERGY (fictif) est une entreprise de services offshore, subsea
             et pipeline conçue pour les opérateurs pétroliers et gaziers ainsi

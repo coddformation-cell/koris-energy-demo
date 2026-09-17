@@ -1,7 +1,9 @@
 import { useMemo, useState } from 'react';
 import { projectFilters, projects, type ProjectFilter } from '../data/projects';
 
-export default function Projects() {
+type Props = { hideHeader?: boolean };
+
+export default function Projects({ hideHeader = false }: Props) {
   const [filter, setFilter] = useState<ProjectFilter>('all');
 
   const items = useMemo(
@@ -12,16 +14,18 @@ export default function Projects() {
   return (
     <section className="section projects">
       <div className="container">
-        <header className="section-head projects-head">
-          <div>
-            <span className="eyebrow">Projets</span>
-            <h2 className="section-title">Une sélection illustrative de nos projets.</h2>
-            <p className="section-lead">
-              Références de projets fictives à des fins de démonstration —
-              aucune donnée client réelle ni localisation exacte n’est
-              divulguée.
-            </p>
-          </div>
+        <header className={`section-head projects-head ${hideHeader ? 'is-filters-only' : ''}`}>
+          {!hideHeader && (
+            <div>
+              <span className="eyebrow">Projets</span>
+              <h2 className="section-title">Une sélection illustrative de nos projets.</h2>
+              <p className="section-lead">
+                Références de projets fictives à des fins de démonstration —
+                aucune donnée client réelle ni localisation exacte n’est
+                divulguée.
+              </p>
+            </div>
+          )}
           <div
             className="projects-filters"
             role="tablist"

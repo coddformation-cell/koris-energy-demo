@@ -2,25 +2,28 @@ import { capabilities } from '../data/capabilities';
 
 type Props = {
   compact?: boolean;
+  hideHeader?: boolean;
 };
 
-export default function Capabilities({ compact = false }: Props) {
+export default function Capabilities({ compact = false, hideHeader = false }: Props) {
   return (
     <section className="section capabilities">
       <div className="container">
-        <header className="section-head">
-          <span className="eyebrow">Expertises</span>
-          <h2 className="section-title">
-            Quatre expertises pour concevoir, installer et maintenir vos actifs
-            offshore.
-          </h2>
-          {!compact && (
-            <p className="section-lead">
-              Une offre intégrée couvrant l’ingénierie, l’installation et la
-              maintenance des infrastructures pétrolières et gazières offshore.
-            </p>
-          )}
-        </header>
+        {!hideHeader && (
+          <header className="section-head">
+            <span className="eyebrow">Expertises</span>
+            <h2 className="section-title">
+              Quatre expertises pour concevoir, installer et maintenir vos actifs
+              offshore.
+            </h2>
+            {!compact && (
+              <p className="section-lead">
+                Une offre intégrée couvrant l’ingénierie, l’installation et la
+                maintenance des infrastructures pétrolières et gazières offshore.
+              </p>
+            )}
+          </header>
+        )}
 
         <ul className="capabilities-grid" role="list">
           {capabilities.map((c) => (

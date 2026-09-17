@@ -1,14 +1,18 @@
 import { standards, standardsIntro } from '../data/standards';
 
-export default function Standards() {
+type Props = { hideHeader?: boolean };
+
+export default function Standards({ hideHeader = false }: Props) {
   return (
     <section className="section standards">
       <div className="container">
-        <header className="section-head standards-head">
-          <span className="eyebrow">{standardsIntro.eyebrow}</span>
-          <h2 className="section-title">{standardsIntro.title}</h2>
-          <p className="section-lead">{standardsIntro.lead}</p>
-        </header>
+        {!hideHeader && (
+          <header className="section-head standards-head">
+            <span className="eyebrow">{standardsIntro.eyebrow}</span>
+            <h2 className="section-title">{standardsIntro.title}</h2>
+            <p className="section-lead">{standardsIntro.lead}</p>
+          </header>
+        )}
 
         <ul className="standards-grid" role="list">
           {standards.map((s) => (

@@ -1,20 +1,24 @@
 import { Link } from 'react-router-dom';
 import { solutions } from '../data/solutions';
 
-export default function Solutions() {
+type Props = { hideHeader?: boolean };
+
+export default function Solutions({ hideHeader = false }: Props) {
   return (
     <section className="section solutions">
       <div className="container">
-        <header className="section-head">
-          <span className="eyebrow">Solutions</span>
-          <h2 className="section-title">
-            Des prestations B2B pour opérateurs et EPC contractors.
-          </h2>
-          <p className="section-lead">
-            Trois formules pensées pour les acteurs offshore, d’une campagne
-            d’inspection ciblée à un lot pipeline EPCI complet.
-          </p>
-        </header>
+        {!hideHeader && (
+          <header className="section-head">
+            <span className="eyebrow">Solutions</span>
+            <h2 className="section-title">
+              Des prestations B2B pour opérateurs et EPC contractors.
+            </h2>
+            <p className="section-lead">
+              Trois formules pensées pour les acteurs offshore, d’une campagne
+              d’inspection ciblée à un lot pipeline EPCI complet.
+            </p>
+          </header>
+        )}
 
         <div className="solutions-grid">
           {solutions.map((s) => (

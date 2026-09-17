@@ -10,7 +10,7 @@ export default function Projets() {
         title="Une sélection illustrative de nos projets."
         lead="Références de projets fictives à des fins de démonstration. Aucune donnée client réelle ni localisation exacte n’est divulguée."
       />
-      <Projects />
+      <Projects hideHeader />
       <CTAFinal />
     </>
   );

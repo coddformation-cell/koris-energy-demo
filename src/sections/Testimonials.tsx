@@ -1,19 +1,23 @@
 import { testimonials } from '../data/company';
 
-export default function Testimonials() {
+type Props = { hideHeader?: boolean };
+
+export default function Testimonials({ hideHeader = false }: Props) {
   return (
     <section className="section testimonials">
       <div className="container">
-        <header className="section-head">
-          <span className="eyebrow">Témoignages</span>
-          <h2 className="section-title">
-            Retours illustratifs de nos interlocuteurs B2B.
-          </h2>
-          <p className="section-lead mono">
-            L’ensemble des témoignages ci-dessous sont fictifs — placeholders
-            pour la maquette.
-          </p>
-        </header>
+        {!hideHeader && (
+          <header className="section-head">
+            <span className="eyebrow">Témoignages</span>
+            <h2 className="section-title">
+              Retours illustratifs de nos interlocuteurs B2B.
+            </h2>
+            <p className="section-lead mono">
+              L’ensemble des témoignages ci-dessous sont fictifs — placeholders
+              pour la maquette.
+            </p>
+          </header>
+        )}
 
         <div className="testimonials-grid">
           {testimonials.map((t) => (

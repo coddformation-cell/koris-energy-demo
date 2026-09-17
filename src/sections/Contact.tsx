@@ -43,8 +43,6 @@ export default function Contact() {
     <section className="section contact">
       <div className="container contact-inner">
         <div className="contact-info">
-          <span className="eyebrow">Contact</span>
-          <h2 className="section-title">Échangez avec notre équipe d’ingénierie.</h2>
           <p className="contact-lead">
             Décrivez brièvement votre projet offshore, subsea ou pipeline —
             notre équipe revient vers vous sous 48 heures ouvrées.
