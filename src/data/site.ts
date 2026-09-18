@@ -1,6 +1,6 @@
 export const site = {
   brand: 'KORIS ENERGY',
-  baseline: 'Engineering the depths.',
+  baseline: 'Engineering the depths. Powering the future.',
   tagline: 'Ingénierie des profondeurs.',
   subline:
     'KORIS ENERGY accompagne les acteurs de l’énergie dans leurs projets offshore, subsea et pipeline dans le Golfe de Guinée.',

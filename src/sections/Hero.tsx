@@ -1,15 +1,12 @@
 import { Link } from 'react-router-dom';
 import { site } from '../data/site';
+import { media } from '../data/media';
 
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-media" aria-hidden="true">
-        <img
-          src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?w=2400&q=80&auto=format&fit=crop"
-          alt=""
-          loading="eager"
-        />
+        <img src={media.hero.url} alt="" loading="eager" />
         <div className="hero-media-overlay" />
       </div>
 

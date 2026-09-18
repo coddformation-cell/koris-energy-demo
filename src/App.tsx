@@ -9,12 +9,16 @@ import Home from './pages/Home';
 import Expertises from './pages/Expertises';
 import Solutions from './pages/Solutions';
 import Projets from './pages/Projets';
+import ProjectDetail from './pages/ProjectDetail';
 import Referentiels from './pages/Referentiels';
 import APropos from './pages/APropos';
 import Contact from './pages/Contact';
 import './App.css';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const REVEAL_SELECTOR =
+  '[data-reveal], .section-head, .capability-card, .solution-card, .project-card, .testimonial-card, .about-value, .process-step, .standard-item, .figure-item, .home-expertise-main, .home-expertise-card, .home-solution-row, .home-project-card, .capability-alt-row, .methodology-step, .timeline-step, .referentiels-step, .project-gallery-item, .project-block';
 
 function RouteScrollReset() {
   const { pathname } = useLocation();
@@ -38,11 +42,7 @@ function useReveal(pathname: string) {
       { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
     );
     const id = window.setTimeout(() => {
-      document
-        .querySelectorAll(
-          '[data-reveal], .section-head, .capability-card, .solution-card, .project-card, .testimonial-card, .about-value, .process-step, .standard-item, .figure-item'
-        )
-        .forEach((el) => obs.observe(el));
+      document.querySelectorAll(REVEAL_SELECTOR).forEach((el) => obs.observe(el));
     }, 50);
     return () => {
       window.clearTimeout(id);
@@ -65,6 +65,7 @@ function AppShell() {
           <Route path="/expertises" element={<Expertises />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/projets" element={<Projets />} />
+          <Route path="/projets/:slug" element={<ProjectDetail />} />
           <Route path="/referentiels" element={<Referentiels />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/contact" element={<Contact />} />

@@ -32,7 +32,6 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-// Chiffres clés illustratifs — clairement signalés comme tels dans l’UI.
 export const keyFigures = [
   { value: '+120', label: 'opérations offshore', hint: 'Chiffre illustratif' },
   { value: '+8', label: 'années d’expérience', hint: 'Chiffre illustratif' },
@@ -92,4 +91,95 @@ export const hseStatement = {
   description:
     'Notre approche place la santé, la sécurité, l’environnement et la qualité au cœur de chaque opération. Procédures, plans HSE, toolbox talks et revues d’incident sont traités comme des livrables opérationnels à part entière.',
   pillars: ['Sécurité', 'Qualité', 'Environnement', 'Conformité'],
+};
+
+// Timeline entreprise — 100% fictive. Chaque étape porte la mention (fictif).
+export const timelineSteps = [
+  {
+    year: '2018',
+    title: 'Création de KORIS ENERGY',
+    text: 'Constitution de l’équipe fondatrice, positionnement offshore et subsea sur le Golfe de Guinée. (fictif)',
+  },
+  {
+    year: '2020',
+    title: 'Première campagne subsea',
+    text: 'Premier programme d’inspection ROV sur un champ pilote. Mise en place des procédures IRM. (fictif)',
+  },
+  {
+    year: '2022',
+    title: 'Base opérationnelle San-Pédro',
+    text: 'Ouverture d’une base opérationnelle dédiée aux mobilisations rapides. (fictif)',
+  },
+  {
+    year: '2024',
+    title: 'Élargissement des expertises',
+    text: 'Extension des capacités à l’offshore construction et à l’EPCI pipeline. (fictif)',
+  },
+  {
+    year: '2026',
+    title: 'Aujourd’hui',
+    text: 'Une équipe pluridisciplinaire au service des opérateurs et EPC contractors de la région. (fictif)',
+  },
+];
+
+export const manifestoBlock = {
+  eyebrow: 'Manifesto',
+  title: 'Des infrastructures critiques. Des environnements exigeants.',
+  paragraphs: [
+    'De la surface aux grandes profondeurs, KORIS ENERGY conçoit, installe et maintient des infrastructures offshore, subsea et pipeline pour le compte d’opérateurs pétroliers et gaziers du Golfe de Guinée.',
+    'Notre approche combine rigueur d’ingénierie, discipline HSE et proximité opérationnelle. Chaque intervention est cadrée, documentée et menée à un niveau d’exigence aligné sur les référentiels internationaux du secteur.',
+  ],
+};
+
+export const visualBannerContent = {
+  eyebrow: '',
+  title: 'Du fond marin aux infrastructures de surface.',
+  cta: 'Explorer nos expertises',
+  ctaTo: '/expertises',
+};
+
+export const homeProjectsIntro = {
+  eyebrow: 'Projets',
+  title: 'Une sélection de nos projets illustratifs.',
+  lead:
+    'Références fictives à titre de démonstration. Chaque projet dispose d’une page dédiée.',
+};
+
+export const homeExpertisesIntro = {
+  eyebrow: 'Expertises',
+  title: 'Quatre expertises. Une chaîne de valeur complète.',
+  lead:
+    'De l’ingénierie de pipeline à la maintenance IRM, nos équipes couvrent chaque étape des projets offshore et subsea.',
+};
+
+export const homeSolutionsIntro = {
+  eyebrow: 'Solutions',
+  title: 'Trois formules pour cadrer votre besoin.',
+  lead:
+    'De la campagne d’inspection ciblée à la prise en charge complète d’un lot EPCI, nos solutions sont pensées pour les opérateurs et EPC contractors.',
+};
+
+export const referentielsUsage = {
+  eyebrow: 'Comment ils interviennent',
+  title: 'Des référentiels intégrés à la préparation et à l’exécution.',
+  steps: [
+    {
+      step: '01',
+      title: 'Préparation',
+      description:
+        'Les référentiels applicables sont identifiés dès le cadrage HSE et technique, puis intégrés aux plans d’exécution et aux procédures.',
+    },
+    {
+      step: '02',
+      title: 'Exécution',
+      description:
+        'Les méthodes et les livrables sont conduits en alignement avec les référentiels sélectionnés, sous supervision d’un responsable qualité dédié.',
+    },
+    {
+      step: '03',
+      title: 'Retour d’expérience',
+      description:
+        'Les enseignements de chaque projet alimentent la base documentaire et affinent l’alignement sur les référentiels à long terme.',
+    },
+  ],
 };
