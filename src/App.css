@@ -1614,6 +1614,7 @@
   gap: 0;
   align-items: stretch;
   min-height: 500px;
+  max-width: 100%;
 }
 .hse-block-media {
   position: relative;
@@ -2219,7 +2220,12 @@
   .manifesto-head { position: static; }
   .project-intro-inner { grid-template-columns: 1fr; }
   .hse-block-inner { grid-template-columns: 1fr; }
-  .hse-block-media { min-height: 300px; aspect-ratio: 16/9; }
+  .hse-block-media {
+    min-height: 0;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 100%;
+  }
   .capability-alt-cols { grid-template-columns: 1fr; }
 }
 
@@ -2247,5 +2253,60 @@
   .project-gallery-grid { grid-template-columns: 1fr; }
   .project-gallery-item.is-primary { grid-column: span 1; }
   .capability-alt-footer { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============ Mobile overflow guards (final) ============ */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .hero-title {
+    font-size: clamp(2.2rem, 11vw, 3.6rem);
+    max-width: 100%;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .hero-baseline {
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    word-break: break-word;
+  }
+  .hero-sub {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+  .hero-brandline {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+  .page-hero-title,
+  .project-hero-title,
+  .visual-banner-title,
+  .cta-final-title,
+  .home-solution-title,
+  .capability-alt-title,
+  .manifesto-title,
+  .section-title,
+  .about-hse-title {
+    max-width: 100%;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  .hero-actions,
+  .cta-final-actions,
+  .home-solution-actions {
+    width: 100%;
+  }
+  .hero-actions .btn,
+  .cta-final-actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+  .btn { max-width: 100%; }
+  .home-project-mini { grid-template-columns: 1fr; }
+  .project-hero-meta { flex-wrap: wrap; gap: 0.4rem; }
+  .project-specs-detailed dt { min-width: 90px; }
+  .contact-map { overflow-x: auto; }
 }
 
